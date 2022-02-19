@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CICT Website</title>
+    </head>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@403&display=swap');
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+        }
+        .container{
+            width: 100%;
+            min-height: 100vh;
+            background: linear-gradient(45deg, #22046b, #e14e42);
+            color: #fff;
+            position: relative;
+        }
+        .navbar{
+            width: 90%;
+            height: 15vh;
+            margin: auto;
+            display: flex;
+            align-items: center;
+        }
+        .logo{
+            width: 100px;
+            cursor: pointer;
+            margin-top: 20px;
+            
+        }
+        nav{
+            flex: 1;
+            text-align: right;
+        }
+        nav ul li{
+            list-style: none;
+            display:inline-block;
+            margin-left: 40px;
+            margin-right: 40px;
+            
+        }
+        nav ul li a{
+            text-decoration: none;
+            color: #fff;
+            font-size: 14px;
+            padding: 5px 2px;
+        }
+        nav ul li a:hover{
+            color: #22046b;
+
+        }
+        .row{
+            width: 80%;
+            min-height: 85vh;
+            margin: auto;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .col{
+            margin: 20px 0;
+            flex-basis: 50%;
+            min-width: 300px;
+            height: 100%;
+            position: relative;
+        }
+        .text-box{
+            max-width: 580px;
+            margin-top: 100px;
+        }
+        .text-box h5{
+            color: transparent;
+            font-size: 25px;
+            font-family: 'Source Code Pro', monospace;  
+            display: inline-block;
+            position: relative; 
+            animation: text_reveal2 1.5s ease forwards;
+            animation-delay: 1.5s;  
+        }
+        .text-box h5 span{
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 0;
+            background-color: black;
+            animation: overlay 3s ease forwards;
+            animation-delay: .5s;
+        }
+        .text-box h1{
+            color: transparent;
+            font-size: 95px;
+            font-weight: 100;
+            letter-spacing: 4px;
+            line-height: 75px;
+            font-family: 'bebas Neue', cursive;
+            display: inline-block;
+            position: relative;
+            animation: text_reveal 2s ease forwards;
+            animation-delay: 2s;
+        }
+        .text-box h1 span{
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 0;
+            background-color: #e14e42;
+            animation: overlay 4s ease forwards;
+            animation-delay: .5s;
+        }
+        .text-box .btn{
+            display: inline-block;
+            padding: 10px 30px;
+            color: black;
+            background-color: transparent;
+            border: 2px solid #e14e42;
+            font-size: 20px;
+            letter-spacing: 2px;
+            margin-top: 30px;
+            transition: .3s ease background-color;
+            text-decoration: none;
+        }
+        .text-box .btn:hover{
+            color: black;
+            background-color: #e14e42;
+        }
+        .gallery-box{
+            max-width: 480px;
+            position: relative;
+            margin: auto;
+        }
+        .gallery-box img{
+            margin-top: 50px;
+            width: 100%;
+            border: 10px solid rgba(255,255,255,0.2);
+            box-sizing: border-box;
+            opacity: .8;
+        }
+        @keyframes overlay {
+            50%{
+                width: 100%;
+                left: 0;
+
+            }
+            100%{
+                left: 100%;
+                width: 0;
+            }
+        }
+        @keyframes text_reveal{
+            100%{
+                color: #e14e42;
+            }
+        }
+        @keyframes text_reveal2{
+            100%{
+                color: black;
+            }
+        }
+    </style>
+
+    <body>
+        <div class="container">
+            <div class="navbar">
+                <a href="#"><img src="../Assets/image-removebg-preview (3).png" class="logo" ></a>
+                <nav>
+                    <ul>
+                        <li><a href="../Src/Login.html">LOGIN</a></li>
+                        <li><a href="../Src/Register.html">REGISTER</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+        
+
+            <div class="row">
+                <div class="col">
+                    <div class="text-box">
+                        <h5>Dear visitor,<span></span></h5>
+                        <h1>I Would<span></span></h1>
+                        <h1>Like To Say<span></span></h1>
+                        <h1>Thank You For<span></span></h1>
+                        <h1>Visiting Here<span></span></h1>
+                        <a href="../Src/HomePage.html" type="button" class="btn">Visit Again</a>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="gallery-box">
+                        <img src="../Assets/handshake-47.gif">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

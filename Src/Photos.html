@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CICT Website</title>
+    </head>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+        }
+        .container{
+            width: 100%;
+            min-height:auto;
+            background: linear-gradient(45deg, #22046b, #e14e42);
+            color: #fff;
+            position: relative;
+        }
+        .navbar{
+            width: 90%;
+            height: 15vh;
+            margin: auto;
+            display: flex;
+            align-items: center;
+        }
+        .logo{
+            width: 100px;
+            cursor: pointer;
+            margin-top: 20px;
+            
+        }
+        nav{
+            flex: 1;
+            text-align: right;
+        }
+        nav ul li{
+            list-style: none;
+            display:inline-block;
+            margin-left: 40px;
+            margin-right: 40px;
+            
+        }
+        nav ul li a{
+            text-decoration: none;
+            color: #fff;
+            font-size: 14px;
+            padding: 5px 2px;
+        }
+        nav ul li a:hover{
+            color: black;
+
+        }
+        li a, .dropbtn {
+            display: inline-block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        li.dropdown {
+            display: inline-block;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: rgba(0, 0, 0, 0.5);
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+        .dropdown-content a {
+            color: white;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        .main{
+            position: relative;
+            height: 660px;
+            width: 90%;
+            margin-left: 5%;
+            
+        }
+        .main p{
+            position: relative;
+            height: auto;
+            width: 100%;
+            text-align: left;
+            font-weight: 500;
+            font-size: 30px;
+            letter-spacing: 1px;
+            color: orange;
+            margin-top: 20px;
+        }
+        .main .gallery{
+            position: relative;
+            height: 550px;
+            width: 100%;
+            margin: auto;
+            padding: 20px 0;
+            display: grid;
+            grid-template-columns: auto auto auto;
+            grid-gap: 2vh;
+            grid-auto-flow: dense;
+
+        }
+        .main .gallery .img{
+            position: relative;
+            height: auto;
+            width: 100%;
+            overflow: hidden;
+            box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.9);
+            border-radius: 2px;
+        }
+        .main .gallery .img:first-child{
+            grid-column-start: span 1;
+            grid-row-start: span 2;
+        }
+        .main .gallery .img:nth-child(2n+3){
+            grid-row-start: span 1;
+        }
+        .main .gallery .img:nth-child(4n+5){
+            grid-row-start: span 2;
+        }
+
+        .main .gallery .img img{
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            filter: brightness(0.5) grayscale(1);
+            transform: 0.3s ease-in-out;
+        }
+        .main .gallery .img:hover img{
+            filter: brightness(1) grayscale(0);
+        }
+        .main hr{
+            width: 200px;
+        }
+        iframe{
+            margin-left: 30%;
+        }
+    </style>
+    
+    <body>
+        <div class="container">
+            <div class="navbar">
+                <a href="#"><img src="../Assets/image-removebg-preview (3).png" class="logo" ></a>
+                <nav>
+                    <ul>
+                        <li class="dropdown">
+                            <a href="javascript:void(0)" class="dropbtn">SCHOOL</a>
+                            <div class="dropdown-content">
+                              <a href="../Src/School.html">COURSES</a>
+                              <a href="../Src/Statements.html">STATEMENTS</a>
+                              <a href="../Src/Announcement.html">ANNOUNCEMENT</a>
+                            </div>
+                          </li>
+                          <li class="dropdown">
+                            <a href="javascript:void(0)" class="dropbtn">ACCOUNT</a>
+                            <div class="dropdown-content">
+                                <a href="../Src/MyAccount.html">MY ACCOUNT</a>
+                              <a href="../Src/Calendar.html">CALENDAR</a>
+                              <a href="../Src/Gallery.html">GALLERY</a>
+                            </div>
+                          </li>
+                        <li class="dropdown">
+                            <a href="javascript:void(0)" class="dropbtn">ABOUT</a>
+                            <div class="dropdown-content">
+                              <a href="../Src/About.html">CREATOR</a>
+                              <a href="../Src/Photos.html">PHOTOS</a>
+                              <a href="Contact Us.html">CONTACT US</a>
+                            </div>
+                          </li>
+                        <li><a href="../Src/LastPage.html">LOGOUT</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+
+            <div class="main">
+                <p>My Photos</p>
+                <br>
+                <hr>    
+                    <div class="gallery">
+                        <div class="img">
+                            <img src="../Assets/2.jpg" />
+                        </div>
+                        <div class="img">
+                            <img src="../Assets/1.jpg" />
+                        </div>
+                        <div class="img">
+                            <img src="../Assets/0.jpg" />
+                        </div>
+                        <div class="img">
+                            <img src="../Assets/3.jpg" />
+                        </div>
+                        <div class="img">
+                            <img src="../Assets/269832450_3001070516809978_7237875250467246878_n.jpg" />
+                        </div>
+                        <div class="img">
+                            <img src="../Assets/5.jpg" />
+                        </div>
+                        <div class="img">
+                            <img src="../Assets/269707422_3001070470143316_2247807895408567462_n.jpg" />
+                        </div>
+                    </div>
+                </div>
+
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/luMrFddl4jg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+        </div>
+    </body>
+</html>

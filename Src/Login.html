@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CICT Website</title>
+    </head>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+        }
+        .container{
+            width: 100%;
+            min-height: 100vh;
+            background: linear-gradient(45deg, #22046b, #e14e42);
+            color: #fff;
+            position: relative;
+        }
+        .navbar{
+            width: 90%;
+            height: 15vh;
+            margin: auto;
+            display: flex;
+            align-items: center;
+        }
+        nav{
+            flex: 1;
+            text-align: right;
+        }
+        nav ul li{
+            list-style: none;
+            display:inline-block;
+            margin-left: 40px;
+            margin-right: 40px;
+            
+        }
+        nav ul li a{
+            text-decoration: none;
+            color: #fff;
+            font-size: 14px;
+            padding: 5px 2px;
+        }
+        nav ul li a:hover{
+            color: #22046b;
+        }
+        .logo{
+            width: 100px;
+            cursor: pointer;
+            margin-top: 20px;  
+        }
+        .loginbox{
+            width: 350px;
+            height: 450px;
+            color: #fff;
+            top: 50%;
+            left: 50%;
+            position: absolute;
+            transform: translate(-50%,-50%);
+            box-sizing: border-box;
+            padding: 110px 30px;
+
+        }
+        .avatar{
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            top: 1%;
+            position: absolute;
+            left: calc(50% - 50px);
+        }
+        h1{
+            margin: 0;
+            padding: 0 0 20px;
+            text-align: center;
+            font-size: 22px;
+        }
+        .loginbox p{
+            margin: 0;
+            padding: 0;
+            font-weight: bold;
+        }
+        .loginbox input{
+            width: 100%;
+            margin-bottom: 20px;
+        }
+        .loginbox input[type="text"], input[type="password"]
+        {
+            border: none;
+            border-bottom: 1px solid #fff;
+            background: transparent;
+            outline: none;
+            height: 40px;
+            color: #fff;
+            font-size: 16px;
+
+        }
+        .loginbox input[type="submit"]
+        {
+            border: none;
+            outline: none;
+            height: 40px;
+            background: #e14e42;
+            font-size: 18px;
+            border-radius: 20px;
+        }
+        .loginbox input[type="submit"]:hover
+        {
+            cursor: pointer;
+            background: #22046b;
+            color: #fff;
+        }
+        .loginbox a{
+            text-decoration: none;
+            font-size: 12px;
+            line-height: 20px;
+            color: #e14e42;
+        }
+        .loginbox a:hover
+        {
+            color: #22046b;
+        }
+    </style>
+
+    <body>
+        <div class="container">
+            <div class="navbar">
+                <a href="#"><img src="../Assets/image-removebg-preview (3).png" class="logo" ></a>
+                <nav>
+                    <ul>
+                        <li><a href="../Src/HomePage.html">HOME</a></li>
+                        <li><a href="../Src/Register.html">REGISTER</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+        
+
+            <div class="loginbox">
+                <img src="../Assets/image-removebg-preview (2).png" class="avatar">
+                    <form action="../Src/School.html">
+                        <p>Username</p>
+                        <input type="text" name="" placeholder="Enter Username" required="Username">
+                        <p>Password</p>
+                        <input type="password" name="" placeholder="Enter Password" required="Password">
+                        <input type="submit" name="" value="Login">
+                        <a href="#">Forget a password?</a><br>
+                        <a href="../Src/Register.html">Don't have an account?</a>
+                    </form>
+            </div>
+        </div>
+    </body>
+</html

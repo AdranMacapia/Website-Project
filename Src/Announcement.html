@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+        <title>CICT Website</title>
+    </head>
+
+    <style>
+
+
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+        }
+        .container{
+            width: 100%;
+            min-height: 100vh;
+            background: linear-gradient(45deg, #22046b, #e14e42);
+            color: #fff;
+            position: relative;
+        }
+        .navbar{
+            width: 90%;
+            height: 15vh;
+            margin: auto;
+            display: flex;
+            align-items: center;
+        }
+        .logo{
+            width: 100px;
+            cursor: pointer;
+            margin-top: 20px;
+            
+        }
+        nav{
+            flex: 1;
+            text-align: right;
+        }
+        nav ul li{
+            list-style: none;
+            display:inline-block;
+            margin-left: 40px;
+            margin-right: 40px;
+            
+        }
+        nav ul li a{
+            text-decoration: none;
+            color: #fff;
+            font-size: 14px;
+            padding: 5px 2px;
+        }
+        nav ul li a:hover{
+            color: #22046b;
+
+        }
+        li a, .dropbtn {
+            display: inline-block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        li.dropdown {
+            display: inline-block;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: rgba(0, 0, 0, 0.5);
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 2;
+        }
+        .dropdown-content a {
+            color: white;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        .wrapper, .wrapper2, .wrapper3, .wrapper4{
+            display: flex;
+            padding-top: 50px;
+            justify-content: center;
+        }
+        .collapsible, .collapsible2, .collapsible3, .collapsible4{
+            max-width: 1500px;
+            overflow: hidden;
+            font-weight: 400;
+            font-family: 'Montserrat', sans-serif;
+        }
+        .collapsible input, .collapsible2 input, .collapsible3 input, .collapsible4 input{
+            display: none;
+        }
+        .collapsible label, .collapsible2 label, .collapsible3 label, .collapsible4 label{
+            position:relative;
+            font-weight: 600;
+            font-family: 'Montserrat', sans-serif;
+            background: linear-gradient(45deg, #22046b, #e14e42);
+            box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.1), 0 4px 11px 0 rgba(0, 0, 0, 0.8);
+            display: block;
+            margin-bottom: 10px;
+            cursor: pointer;
+            padding: 15px;
+            border-radius: 4px;
+            color: white;
+            z-index: 1;
+        }
+        .collapsible4 textarea{
+            font-family: 'Montserrat', sans-serif;
+            background: none;
+            color: white;
+            box-shadow: none;
+            border: none;
+            resize: none;
+            font-weight: 600;
+            font-size: medium;
+            justify-content: center;
+
+            top: 0; 
+        }
+        .collapsible-text4 textarea{
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 400;
+            font-size: medium;
+            background: none;
+            color: white;
+            box-shadow: none;
+            border: none;
+            resize: none;
+            top: 0; 
+        }
+        .collapsible label:after, .collapsible2 label:after, .collapsible3 label:after, .collapsible4 label:after{
+            content: "";
+            position: absolute;
+            right: 15px;
+            top: 13px;
+            width: 20px;
+            height: 25px;
+        }
+        .collapsible-text, .collapsible-text2, .collapsible-text3, .collapsible-text4{
+            max-height: 1px;
+            overflow: hidden;
+            border-radius: 4px;
+            line-height: 1.4;
+            color: white;
+            position: relative;
+            top: -100%;
+            opacity: 0.5;
+            transition: all 0.3s ease;
+        }
+        .collapsible input:checked ~ .collapsible-text, .collapsible2 input:checked ~ .collapsible-text2, .collapsible3 input:checked ~ .collapsible-text3, .collapsible4 input:checked ~ .collapsible-text4{
+            max-height: 300px;
+            padding-bottom: 25px;
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+            box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.1), 0 4px 11px 0 rgba(0, 0, 0, 0.8);
+            opacity: 1;
+            top: 0;
+        }
+        .collapsible-text h2, .collapsible-text2 h2, .collapsible-text3 h2, .collapsible-text4 h2{
+            margin-bottom: 10px;
+            padding: 15px 15px 0;
+            color: white;
+        }
+        .collapsible-text p, .collapsible-text2 p, .collapsible-text3 p, .collapsible-text4 p{
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+         .form input[type="submit"]{
+            width: 100px;
+            background: linear-gradient(45deg, #22046b, #e14e42);
+            padding: 10px;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 18px;
+            font-family: 'Montserrat', sans-serif;
+            margin-left: 750px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+         .form input[type="submit"]:hover{
+            background: rgba(0,0,0,0.5);
+            color: #e14e42;
+        }        
+
+    </style>
+
+    <body>
+        <div class="container">
+            <div class="navbar">
+                <a href="../Src/HomePage.html"><img src="../Assets/image-removebg-preview (3).png" class="logo" ></a>
+                <nav>
+                    <ul>
+                        <li class="dropdown">
+                            <a href="javascript:void(0)" class="dropbtn">SCHOOL</a>
+                            <div class="dropdown-content">
+                              <a href="../Src/School.html">COURSES</a>
+                              <a href="../Src/Statements.html">STATEMENTS</a>
+                              <a href="../Src/Announcement.html">ANNOUNCEMENT</a>
+                            </div>
+                          </li>
+                          <li class="dropdown">
+                            <a href="javascript:void(0)" class="dropbtn">ACCOUNT</a>
+                            <div class="dropdown-content">
+                                <a href="../Src/MyAccount.html">MY ACCOUNT</a>
+                              <a href="../Src/Calendar.html">CALENDAR</a>
+                              <a href="../Src/Gallery.html">GALLERY</a>
+                            </div>
+                          </li>
+                        <li class="dropdown">
+                            <a href="javascript:void(0)" class="dropbtn">ABOUT</a>
+                            <div class="dropdown-content">
+                              <a href="../Src/About.html">CREATOR</a>
+                              <a href="../Src/Photos.html">PHOTOS</a>
+                              <a href="Contact Us.html">CONTACT US</a>
+                            </div>
+                          </li>
+                        <li><a href="../Src/LastPage.html">LOGOUT</a></li>
+                    </ul>
+                </nav>
+            </div>
+		
+            <div class="wrapper">
+                <div class="collapsible">
+                        <input type="checkbox" id="collapsible-head">
+                    <label for="collapsible-head">COVID-19 medicine Molnupiravir now available in health centers thru Telemedicine
+                    </label>
+                    <div class="collapsible-text">
+                        <h2>Desciption</h2>
+                        <p>
+                            The City Government of Taguig, headed by Mayor Lino Cayetano, turned over on January 21, Friday, 10,000 capsules of  COVID-19 medicine Molnupiravir to the City Health Office to be given to COVID-19 patients under prescription.
+
+                            According to the Institute of Clinical Epidemology, National Institute of Health, Molnupiravir is used to treat confirmed COVID patients who are 18 years old and above, with 5 days of mild to moderate COVID-19 symptoms and with at least one risk factor for progression. This medicine shall allow patients to be taken care of properly and prevent hospitalization.
+                        </p>
+                    </div>
+                </div>
+                
+            </div>
+
+            <div class="wrapper2">
+                <div class="collapsible2">
+                        <input type="checkbox" id="collapsible-head2">
+                    <label for="collapsible-head2">Taguig imposes restrictions on movement of unvaccinated individuals
+                    </label>
+                    <div class="collapsible-text2">
+                        <h2>Desciption</h2>
+                        <p>
+                            Taguig’s Safe City Task Force has issued Advisory No. 62, effectively adopting  the Metropolitan Manila and Development Authority’s Resolution 22-01, Series of 2022,  regulating the mobility of unvaccinated individuals.
+                            Mayor Lino Cayetano said the adoption of the said resolution was made primarily “to save lives and livelihood.”
+                            “Unvaccinated individuals are at a higher risk if  infected with the COVID-19 virus. The regulation of the mobility of this vulnerable segment of the population is also a better alternative to a total lockdown that affects the entire economy,” Mayor Lino said.
+                            Under the advisory, the regulation of unvaccinated individuals shall be implemented citywide.
+                            The enforcement will focus on areas with a high possibility of COVID-19 transmission such as public transportation and closed spaces, and areas which have seen increased COVID-19 cases and low vaccination rates.
+                            The City enjoins the private sector to help by checking its employees’ vaccination status.
+                            Under  the MMDA resolution,  unvaccinated individuals are mandated to remain in their residences at all times except for the procurement of essential goods and services such as food, water, medical services, public utilities, and work.
+                            In addition, they are prohibited from indoor and outdoor or al fresco dining in restaurants and other food establishments, leisure and social trips to malls, hotels, event venues, sports, and country clubs, and similar facilities.
+                            Traveling via public transportation “by land, sea, and air” except for the procurement of essential goods and services is also prohibited.
+                            However, individual outdoor exercise is still allowed for all individuals regardless of vaccination status, age, or comorbidities.
+                            Fully vaccinated individuals who wish to enter public and private establishments in Taguig City are  required to present  proof of vaccination and a valid government ID with picture and address.
+                            Citizens are reminded to remain vigilant and strictly observe and follow health and safety protocols being implemented in the city to lower the transmission of the virus.
+                            “We are working hand in hand with the National Government in implementing necessary precautions to cease the spread of the virus. In Taguig, we will continue to be aggressive in doing our vaccination. We strongly believe that this is our effective defense against the virus,” the mayor added.
+                        </p>
+                    </div>
+                </div>
+                
+            </div>
+
+            <div class="wrapper3">
+                <div class="collapsible3">
+                        <input type="checkbox" id="collapsible-head3">
+                    <label for="collapsible-head3">Taguig launches Online Payment Portal via TRACE; paying taxes of Taguigeños now more accessible
+                    </label>
+                    <div class="collapsible-text3">
+                        <h2>Desciption</h2>
+                        <p>
+                            As part of Taguig’s campaign in transitioning to the new normal, the City opens Taguig Online Payment Portal (TOPP) for Taguigeño stakeholders to pay Real Property Tax (RPT) and Business Tax faster, safer, and more convenient.
+                            TOPP aims for a hassle-free process of making payments for taxes to all Taguigeños. It can be accessed through Taguig TRACE (trace.taguig.gov.ph). It requires a valid cellphone number and an Internet connection to access the portal. The public can use WiFi ng Bayan Kiosks available at 107 sites all throughout the City for easy access and internet connection.
+                            TOPP could be used to pay Real Property Tax for taxpayers who have an updated RPT payment and remaining Business Tax obligation, provided that the business owner has paid the Quarter Business Tax obligation.
+                            “We want to provide you the most convenient and safest ways in this new normal. With our newest TOP Portal, paying taxes would be very easy and secure. You can settle your taxes with the tip of your fingers, so I encourage every taxpayer that once the TOP Portal is available, use it. It’s for you,” Mayor Lino said.
+                            Payment options for TOPP are Credit or Debit card (Visa/Mastercard), Gcash, and Paymaya. Taxpayers can claim their official receipt after five (5) working days by booking an appointment first through TOPP.
+                            Taguigeño taxpayers can claim their official receipt at the TOP Portal office located at the ground floor of Taguig City Hall five (5) working days after your online payment. Those claiming their receipts must also secure an appointment through the TOP Portal.
+                            Mayor Lino encourages all Taguigeño stakeholders to settle their taxes on time to avoid any inconvenience and delays. Taguigeños can expect that these taxes will be used for the improvement of public services and the needs of every resident.
+                            Taguig vows to further expand its online payment options to secure everyone’s safety against COVID-19 in this new normal.
+                        </p>
+                    </div>
+                </div>
+                
+            </div>
+
+            <div class="wrapper4">
+                <div class="collapsible4">
+                        <input type="checkbox" id="collapsible-head4">
+                    <label for="collapsible-head4"> <textarea cols="158" rows="1" required="required"></textarea>
+                    </label>
+                    
+                    <div class="collapsible-text4">
+                        <h2>Desciption</h2>
+                        <p><textarea cols="160" rows="6" required="required"></textarea></p>
+
+                    </div>
+
+                </div>
+
+                
+            </div>
+            <div class="form">
+                <input type="submit" name="button" value="Submit">
+                </div>
+        </div>
+    </body>
+</html>

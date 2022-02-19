@@ -1,0 +1,1217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CICT Website</title>
+</head>
+<style>
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+        }
+        .container1{
+            width: 100%;
+            min-height: 100vh;
+            background: linear-gradient(45deg, #22046b, #e14e42);
+            color: #fff;
+            position: fixed;
+        }
+        .navbar{
+            width: 90%;
+            height: 15vh;
+            margin: auto;
+            display: flex;
+            align-items: center;
+        }
+        .logo{
+            width: 100px;
+            cursor: pointer;
+            margin-top: 20px;
+            
+        }
+        nav{
+            flex: 1;
+            text-align: right;
+        }
+        nav ul li{
+            list-style: none;
+            display:inline-block;
+            margin-left: 40px;
+            margin-right: 40px;
+            
+        }
+        nav ul li a{
+            text-decoration: none;
+            color: #fff;
+            font-size: 14px;
+            padding: 5px 2px;
+        }
+        nav ul li a:hover{
+            color: #22046b;
+
+        }
+        li a, .dropbtn {
+            display: inline-block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        li.dropdown {
+            display: inline-block;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: rgba(0, 0, 0, 0.5);
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+        .dropdown-content a {
+            color: white;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+</style>
+
+<style>
+            .container2{
+                max-width: 1000px;
+                line-height: 30px;
+                font-family: sans-serif;
+                margin-left: 16.5%;
+                margin-top: 2%;
+                padding: 1px 0px;
+            }
+            .month{
+                text-align: center;
+                font-size: 2.6em;
+                color: orangered;
+                padding: 10px;
+                letter-spacing: 1px;
+                border: 5px solid #fff;
+                background-color: rgba(0,0,0,0.5);
+            }
+            table th{
+                color: #fff;
+                background-color: rgba(0,0,0,0.5);
+            }
+            table, th, td{
+                width: 100%;
+                table-layout: fixed;
+                text-align: center;
+                border-collapse: collapse;
+                font-size: 25px;
+                border: 5px solid #fff;
+                color: #fff;
+                padding: 22px;
+                cursor: pointer;
+            }
+            tr, th, td{
+                padding: 15px;
+            }
+            tr td{
+                font-size: 30px;
+            }
+            th{
+                color: #fff;
+            }
+            td{
+                background-color: rgba(0,0,0,0.5);
+                color: #22046b;
+            }
+            td:hover{
+                background: black;
+                color: orangered;
+            }
+            .one{
+                background-color:orangered;
+                color: white;
+            }   
+    
+            /* Hide the images by default */
+            .mySlides {
+                display: none;
+            }
+
+            /* Add a pointer when hovering over the thumbnail images */
+            .cursor {
+                cursor: pointer;
+            }
+
+            /* Next & previous buttons */
+            .prev,
+            .next {
+                cursor: pointer;
+                position: absolute;
+                top: 60%;
+                width: auto;
+                padding: 16px;
+                margin-top: -50px;
+                color: #22046b;
+                font-weight: bold;
+                font-size: 50px;
+                border-radius: 0 3px 3px 0;
+                user-select: none;
+                -webkit-user-select: none;
+                margin-left: 185px;
+                margin-right: 255px;
+            }
+
+            /* Position the "next button" to the right */
+            .next {
+                right: 0;
+                border-radius: 3px 0 0 3px;
+            }
+
+            /* Number text (1/12 etc) */
+            .numbertext {
+                background-color: rgba(0, 0, 0, 0.8);
+                color: orangered;
+                font-size: 20px;
+                padding: 8px 12px;
+                position: absolute;
+                margin-left: 29%;
+                margin-top: 36.7%;
+            }
+
+            /* On hover, add a black background color with a little bit see-through */
+            .prev:hover,
+            .next:hover {
+                background-color: rgba(0, 0, 0, 0.8);
+                color: orangered;
+            }
+            
+            .row:after {
+                content: "";
+                display: table;
+                clear: both;
+            }
+
+            /* Six columns side by side */
+            .column {
+                float: left;
+                width: 16.66%;
+            }
+
+            /* Add a transparency effect for thumnbail images */
+            .demo {
+                opacity: 0.6;
+            }
+
+            .active,
+            .demo:hover {
+                opacity: 1;
+            }
+</style>
+<body>
+
+    <div class="container1">
+        <div class="navbar">
+            <a href="../Src/HomePage.html"><img src="../Assets/image-removebg-preview (3).png" class="logo" ></a>
+            <nav>
+                <ul>
+                    <li class="dropdown">
+                        <a href="javascript:void(0)" class="dropbtn">SCHOOL</a>
+                        <div class="dropdown-content">
+                          <a href="../Src/School.html">COURSES</a>
+                          <a href="../Src/Statements.html">STATEMENTS</a>
+                          <a href="../Src/Announcement.html">ANNOUNCEMENT</a>
+                        </div>
+                      </li>
+                      <li class="dropdown">
+                        <a href="javascript:void(0)" class="dropbtn">ACCOUNT</a>
+                        <div class="dropdown-content">
+                            <a href="../Src/MyAccount.html">MY ACCOUNT</a>
+                          <a href="../Src/Calendar.html">CALENDAR</a>
+                          <a href="../Src/Gallery.html">GALLERY</a>
+                        </div>
+                      </li>
+                    <li class="dropdown">
+                        <a href="javascript:void(0)" class="dropbtn">ABOUT</a>
+                        <div class="dropdown-content">
+                          <a href="../Src/About.html">CREATOR</a>
+                          <a href="../Src/Photos.html">PHOTOS</a>
+                          <a href="Contact Us.html">CONTACT US</a>
+                        </div>
+                      </li>
+                    <li><a href="../Src/LastPage.html">LOGOUT</a></li>
+                </ul>
+            </nav>
+        </div>
+    <div class="container2">
+
+
+        <div class="mySlides">
+          <div class="numbertext">1 / 12</div>
+            <div class="month">
+                <br>
+                <strong >JANUARY 2022</strong>
+                <br>
+                <strong>----------------</strong>
+            </div>
+            
+            <table>
+                <tr>
+                    <th>SUN</th>
+                    <th>MON</th>
+                    <th>TUE</th>
+                    <th>WED</th>
+                    <th>THU</th>
+                    <th>FRI</th>
+                    <th>SAT</th>
+                </tr>
+                <tr>
+                    <td>.</td>
+                    <td>.</td>
+                    <td>.</td>
+                    <td>.</td>
+                    <td>.</td>
+                    <td>.</td>
+                    <td class="one">1</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>4</td>
+                    <td>5</td>
+                    <td>6</td>
+                    <td>7</td>
+                    <td>8</td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td>10</td>
+                    <td>11</td>
+                    <td>12</td>
+                    <td>13</td>
+                    <td>14</td>
+                    <td>15</td>
+                </tr>
+                <tr>
+                    <td>16</td>
+                    <td>17</td>
+                    <td>18</td>
+                    <td>19</td>
+                    <td>20</td>
+                    <td>21</td>
+                    <td>22</td>
+                </tr>
+                <tr>
+                    <td>23</td>
+                    <td>24</td>
+                    <td>25</td>
+                    <td>26</td>
+                    <td>27</td>
+                    <td>28</td>
+                    <td>29</td>
+                </tr>
+                <tr>
+                    <td>30</td>
+                    <td>31</td>
+                    <td>.</td>
+                    <td>.</td>
+                    <td>.</td>
+                    <td>.</td>
+                    <td>.</td>
+                </tr>
+            </table>
+            
+        </div>
+    
+
+    
+        <div class="mySlides">
+          <div class="numbertext">2 / 12</div>
+            <div class="month">
+                <br>
+                <strong >FEBRUARY 2022</strong>
+                <br>
+                <strong>------------------</strong>
+            </div>
+            
+            <table>
+                <tr>
+                    <th>SUN</th>
+                    <th>MON</th>
+                    <th>TUE</th>
+                    <th>WED</th>
+                    <th>THU</th>
+                    <th>FRI</th>
+                    <th>SAT</th>
+                </tr>
+                <tr>
+                    <td>.</td>
+                    <td>.</td>
+                    <td class="one">1</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>4</td>
+                    <td>5</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>7</td>
+                    <td>8</td>
+                    <td>9</td>
+                    <td>10</td>
+                    <td>11</td>
+                    <td>12</td>
+                </tr>
+                <tr>
+                    <td>13</td>
+                    <td>14</td>
+                    <td>15</td>
+                    <td>16</td>
+                    <td>17</td>
+                    <td>18</td>
+                    <td>19</td>
+                </tr>
+                <tr>
+                    <td>20</td>
+                    <td>21</td>
+                    <td>22</td>
+                    <td>23</td>
+                    <td>24</td>
+                    <td class="one">25</td>
+                    <td>26</td>
+                </tr>
+                <tr>
+                    <td>27</td>
+                    <td>28</td>
+                    <td>.</td>
+                    <td>.</td>
+                    <td>.</td>
+                    <td>.</td>
+                    <td>.</td>
+                </tr>
+                <tr>
+                    <td>.</td>
+                    <td>.</td>
+                    <td>.</td>
+                    <td>.</td>
+                    <td>.</td>
+                    <td>.</td>
+                    <td>.</td>
+                </tr>
+                
+            </table>
+            
+        </div>
+    
+        <div class="mySlides">
+            <div class="numbertext">3 / 12</div>
+              <div class="month">
+                <br>
+                <strong >MARCH 2022</strong>
+                <br>
+                <strong>------------</strong>
+              </div>
+              
+              <table>
+                  <tr>
+                      <th>SUN</th>
+                      <th>MON</th>
+                      <th>TUE</th>
+                      <th>WED</th>
+                      <th>THU</th>
+                      <th>FRI</th>
+                      <th>SAT</th>
+                  </tr>
+                    <tr>
+                        <td>.</td>
+                        <td>.</td>
+                        <td>1</td>
+                        <td>2</td>
+                        <td>3</td>
+                        <td>4</td>
+                        <td>5</td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>7</td>
+                        <td>8</td>
+                        <td>9</td>
+                        <td>10</td>
+                        <td>11</td>
+                        <td>12</td>
+                    </tr>
+                    <tr>
+                        <td>13</td>
+                        <td>14</td>
+                        <td>15</td>
+                        <td class="one">16</td>
+                        <td>17</td>
+                        <td>18</td>
+                        <td>19</td>
+                    </tr>
+                    <tr>
+                        <td>20</td>
+                        <td>21</td>
+                        <td>22</td>
+                        <td>23</td>
+                        <td>24</td>
+                        <td>25</td>
+                        <td>26</td>
+                    </tr>
+                    <tr>
+                        <td>27</td>
+                        <td>28</td>
+                        <td>29</td>
+                        <td>30</td>
+                        <td>31</td>
+                        <td>.</td>
+                        <td>.</td>
+                    </tr>
+                    <tr>
+                        <td>.</td>
+                        <td>.</td>
+                        <td>.</td>
+                        <td>.</td>
+                        <td>.</td>
+                        <td>.</td>
+                        <td>.</td>
+                    </tr>
+              </table>
+              
+          </div>
+
+          <div class="mySlides">
+            <div class="numbertext">4 / 12</div>
+              <div class="month">
+                <br>
+                <strong >APRIL 2022</strong>
+                <br>
+                <strong>----------</strong>
+              </div>
+              
+              <table>
+                  <tr>
+                      <th>SUN</th>
+                      <th>MON</th>
+                      <th>TUE</th>
+                      <th>WED</th>
+                      <th>THU</th>
+                      <th>FRI</th>
+                      <th>SAT</th>
+                  </tr>
+                  <tr>
+                      <td>.</td>
+                      <td>.</td>
+                      <td>.</td>
+                      <td>.</td>
+                      <td>.</td>
+                      <td>1</td>
+                      <td>2</td>
+                  </tr>
+                  <tr>
+                      <td>3</td>
+                      <td>4</td>
+                      <td>4</td>
+                      <td>6</td>
+                      <td>7</td>
+                      <td>8</td>
+                      <td class="one">9</td>
+                  </tr>
+                  <tr>
+                      <td>10</td>
+                      <td>11</td>
+                      <td>12</td>
+                      <td>13</td>
+                      <td class="one">14</td>
+                      <td class="one">15</td>
+                      <td class="one">16</td>
+                  </tr>
+                  <tr>
+                      <td>17</td>
+                      <td>18</td>
+                      <td>19</td>
+                      <td>20</td>
+                      <td>21</td>
+                      <td>22</td>
+                      <td>23</td>
+                  </tr>
+                  <tr>
+                      <td>24</td>
+                      <td>25</td>
+                      <td>26</td>
+                      <td>27</td>
+                      <td>28</td>
+                      <td>29</td>
+                      <td>30</td>
+                  </tr>
+                  <tr>
+                    <td>.</td>
+                    <td>.</td>
+                    <td>.</td>
+                    <td>.</td>
+                    <td>.</td>
+                    <td>.</td>
+                    <td>.</td>
+                </tr>
+              </table>
+              
+          </div>
+
+          <div class="mySlides">
+            <div class="numbertext">5 / 12</div>
+              <div class="month">
+                <br>
+                <strong >MAY 2022</strong>
+                <br>
+                <strong>--------</strong>
+              </div>
+              
+              <table>
+                  <tr>
+                      <th>SUN</th>
+                      <th>MON</th>
+                      <th>TUE</th>
+                      <th>WED</th>
+                      <th>THU</th>
+                      <th>FRI</th>
+                      <th>SAT</th>
+                  </tr>
+                  <tr>
+                    <td class="one">1</td>
+                      <td>2</td>
+                      <td class="one">3</td>
+                      <td>4</td>
+                      <td>5</td>
+                      <td>1</td>
+                      <td>2</td>
+                  </tr>
+                  <tr>
+                      <td>6</td>
+                      <td>7</td>
+                      <td>8</td>
+                      <td>9</td>
+                      <td>10</td>
+                      <td>11</td>
+                      <td>12</td>
+                  </tr>
+                  <tr>
+                      <td>13</td>
+                      <td>14</td>
+                      <td>15</td>
+                      <td>16</td>
+                      <td>17</td>
+                      <td>18</td>
+                      <td>19</td>
+                  </tr>
+                  <tr>
+                      <td>20</td>
+                      <td>21</td>
+                      <td>22</td>
+                      <td>23</td>
+                      <td>24</td>
+                      <td>25</td>
+                      <td>26</td>
+                  </tr>
+                  <tr>
+                      <td>27</td>
+                      <td>28</td>
+                      <td>29</td>
+                      <td>30</td>
+                      <td>31</td>
+                      <td>.</td>
+                      <td>.</td>
+                  </tr>
+                  <tr>
+                    <td>.</td>
+                    <td>.</td>
+                    <td>.</td>
+                    <td>.</td>
+                    <td>.</td>
+                    <td>.</td>
+                    <td>.</td>
+                </tr>
+              </table>
+              
+          </div>
+
+          <div class="mySlides">
+            <div class="numbertext">6 / 12</div>
+              <div class="month">
+                <br>
+                <strong >JUNE 2022</strong>
+                <br>
+                <strong>----------</strong>
+              </div>
+              
+              <table>
+                  <tr>
+                      <th>SUN</th>
+                      <th>MON</th>
+                      <th>TUE</th>
+                      <th>WED</th>
+                      <th>THU</th>
+                      <th>FRI</th>
+                      <th>SAT</th>
+                  </tr>
+                  <tr>
+                      <td>.</td>
+                      <td>.</td>
+                      <td>.</td>
+                      <td>1</td>
+                      <td>2</td>
+                      <td>3</td>
+                      <td>4</td>
+                  </tr>
+                  <tr>
+                      <td>5</td>
+                      <td>6</td>
+                      <td>7</td>
+                      <td>8</td>
+                      <td>9</td>
+                      <td>10</td>
+                      <td>11</td>
+                  </tr>
+                  <tr>
+                    <td class="one">12</td>
+                      <td>13</td>
+                      <td>14</td>
+                      <td>15</td>
+                      <td>16</td>
+                      <td>17</td>
+                      <td>18</td>
+                  </tr>
+                  <tr>
+                      <td>19</td>
+                      <td>20</td>
+                      <td>21</td>
+                      <td>22</td>
+                      <td>23</td>
+                      <td class="one">24</td>
+                      <td>25</td>
+                  </tr>
+                  <tr>
+                      <td>26</td>
+                      <td>27</td>
+                      <td>28</td>
+                      <td>29</td>
+                      <td>30</td>
+                      <td>.</td>
+                      <td>.</td>
+                  </tr>
+                  <tr>
+                    <td>.</td>
+                    <td>.</td>
+                    <td>.</td>
+                    <td>.</td>
+                    <td>.</td>
+                    <td>.</td>
+                    <td>.</td>
+                </tr>
+              </table>
+              
+          </div>
+
+          <div class="mySlides">
+            <div class="numbertext">7 / 12</div>
+              <div class="month">
+                <br>
+                <strong >JULY 2022</strong>
+                <br>
+                <strong>----------</strong>
+              </div>
+              
+              <table>
+                  <tr>
+                      <th>SUN</th>
+                      <th>MON</th>
+                      <th>TUE</th>
+                      <th>WED</th>
+                      <th>THU</th>
+                      <th>FRI</th>
+                      <th>SAT</th>
+                  </tr>
+                  <tr>
+                    <td>.</td>
+                    <td>.</td>
+                    <td>.</td>
+                    <td>.</td>
+                    <td>.</td>
+                    <td>1</td>
+                    <td>2</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>4</td>
+                    <td>4</td>
+                    <td>6</td>
+                    <td>7</td>
+                    <td>8</td>
+                    <td>9</td>
+                </tr>
+                <tr>
+                    <td class="one">10</td>
+                    <td>11</td>
+                    <td>12</td>
+                    <td>13</td>
+                    <td>14</td>
+                    <td>15</td>
+                    <td>16</td>
+                </tr>
+                <tr>
+                    <td>17</td>
+                    <td>18</td>
+                    <td>19</td>
+                    <td>20</td>
+                    <td>21</td>
+                    <td>22</td>
+                    <td>23</td>
+                </tr>
+                <tr>
+                    <td>24</td>
+                    <td>25</td>
+                    <td>26</td>
+                    <td>27</td>
+                    <td>28</td>
+                    <td>29</td>
+                    <td>30</td>
+                </tr>
+                  <tr>
+                      <td>31</td>
+                      <td>.</td>
+                      <td>.</td>
+                      <td>.</td>
+                      <td>.</td>
+                      <td>.</td>
+                      <td>.</td>
+                  </tr>
+              </table>
+              
+          </div>
+
+          <div class="mySlides">
+            <div class="numbertext">8 / 12</div>
+              <div class="month">
+                <br>
+                <strong >AUGUST 2022</strong>
+                <br>
+                <strong>--------------</strong>
+              </div>
+              
+              <table>
+                  <tr>
+                      <th>SUN</th>
+                      <th>MON</th>
+                      <th>TUE</th>
+                      <th>WED</th>
+                      <th>THU</th>
+                      <th>FRI</th>
+                      <th>SAT</th>
+                  </tr>
+                  <tr>
+                      <td>.</td>
+                      <td>1</td>
+                      <td>2</td>
+                      <td>3</td>
+                      <td>4</td>
+                      <td>5</td>
+                      <td>6</td>
+                  </tr>
+                  <tr>
+                      <td>7</td>
+                      <td>8</td>
+                      <td>9</td>
+                      <td>10</td>
+                      <td>11</td>
+                      <td>12</td>
+                      <td>13</td>
+                  </tr>
+                  <tr>
+                      <td>14</td>
+                      <td>15</td>
+                      <td>16</td>
+                      <td>17</td>
+                      <td>18</td>
+                      <td class="one">19</td>
+                      <td>20</td>
+                  </tr>
+                  <tr>
+                    <td class="one">21</td>
+                      <td>22</td>
+                      <td>23</td>
+                      <td>24</td>
+                      <td>25</td>
+                      <td>26</td>
+                      <td>27</td>
+                  </tr>
+                  <tr>
+                      <td>28</td>
+                      <td class="one">29</td>
+                      <td>30</td>
+                      <td>31</td>
+                      <td>.</td>
+                      <td>.</td>
+                      <td>.</td>
+                  </tr>
+                  <tr>
+                    <td>.</td>
+                    <td>.</td>
+                    <td>.</td>
+                    <td>.</td>
+                    <td>.</td>
+                    <td>.</td>
+                    <td>.</td>
+                </tr>
+              </table>
+              
+          </div>
+
+          <div class="mySlides">
+            <div class="numbertext">9 / 12</div>
+              <div class="month">
+                <br>
+                <strong >SEPTEMBER 2022</strong>
+                <br>
+                <strong>--------------------</strong>
+              </div>
+              
+              <table>
+                  <tr>
+                      <th>SUN</th>
+                      <th>MON</th>
+                      <th>TUE</th>
+                      <th>WED</th>
+                      <th>THU</th>
+                      <th>FRI</th>
+                      <th>SAT</th>
+                  </tr>
+                  <tr>
+                      <td>.</td>
+                      <td>.</td>
+                      <td>.</td>
+                      <td>.</td>
+                      <td>1</td>
+                      <td>2</td>
+                      <td>3</td>
+                  </tr>
+                  <tr>
+                      <td>4</td>
+                      <td>5</td>
+                      <td>6</td>
+                      <td>7</td>
+                      <td>8</td>
+                      <td>9</td>
+                      <td>10</td>
+                  </tr>
+                  <tr>
+                      <td>11</td>
+                      <td>12</td>
+                      <td>13</td>
+                      <td>14</td>
+                      <td>15</td>
+                      <td>16</td>
+                      <td>17</td>
+                  </tr>
+                  <tr>
+                      <td>18</td>
+                      <td>19</td>
+                      <td>20</td>
+                      <td>21</td>
+                      <td>22</td>
+                      <td>23</td>
+                      <td>24</td>
+                  </tr>
+                  <tr>
+                      <td>25</td>
+                      <td>26</td>
+                      <td>27</td>
+                      <td>28</td>
+                      <td>29</td>
+                      <td>30</td>
+                      <td>.</td>
+                  </tr>
+                  <tr>
+                    <td>.</td>
+                    <td>.</td>
+                    <td>.</td>
+                    <td>.</td>
+                    <td>.</td>
+                    <td>.</td>
+                    <td>.</td>
+                </tr>
+              </table>
+              
+          </div>
+
+          <div class="mySlides">
+            <div class="numbertext">10 / 12</div>
+              <div class="month">
+                <br>
+                <strong >OCTOBER 2022</strong>
+                <br>
+                <strong>----------------</strong>
+              </div>
+              
+              <table>
+                  <tr>
+                      <th>SUN</th>
+                      <th>MON</th>
+                      <th>TUE</th>
+                      <th>WED</th>
+                      <th>THU</th>
+                      <th>FRI</th>
+                      <th>SAT</th>
+                  </tr>
+                  <tr>
+                    <td>.</td>
+                    <td>.</td>
+                    <td>.</td>
+                    <td>.</td>
+                    <td>.</td>
+                    <td>.</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>4</td>
+                    <td>5</td>
+                    <td>6</td>
+                    <td>7</td>
+                    <td>8</td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td>10</td>
+                    <td>11</td>
+                    <td>12</td>
+                    <td>13</td>
+                    <td>14</td>
+                    <td>15</td>
+                </tr>
+                <tr>
+                    <td>16</td>
+                    <td>17</td>
+                    <td>18</td>
+                    <td>19</td>
+                    <td>20</td>
+                    <td>21</td>
+                    <td>22</td>
+                </tr>
+                <tr>
+                    <td>23</td>
+                    <td>24</td>
+                    <td>25</td>
+                    <td>26</td>
+                    <td>27</td>
+                    <td>28</td>
+                    <td>29</td>
+                </tr>
+                <tr>
+                    <td>30</td>
+                    <td>31</td>
+                    <td>.</td>
+                    <td>.</td>
+                    <td>.</td>
+                    <td>.</td>
+                    <td>.</td>
+                </tr>
+              </table>
+              
+          </div>
+
+          <div class="mySlides">
+            <div class="numbertext">11 / 12</div>
+              <div class="month">
+                <br>
+                <strong >NOVEMBER 2022</strong>
+                <br>
+                <strong>------------------</strong>
+              </div>
+              
+              <table>
+                  <tr>
+                      <th>SUN</th>
+                      <th>MON</th>
+                      <th>TUE</th>
+                      <th>WED</th>
+                      <th>THU</th>
+                      <th>FRI</th>
+                      <th>SAT</th>
+                  </tr>
+                  <tr>
+                      <td>.</td>
+                      <td>.</td>
+                      <td class="one">1</td>
+                      <td class="one">2</td>
+                      <td>3</td>
+                      <td>4</td>
+                      <td>5</td>
+                  </tr>
+                  <tr>
+                      <td>6</td>
+                      <td>7</td>
+                      <td>8</td>
+                      <td>9</td>
+                      <td>10</td>
+                      <td>11</td>
+                      <td>12</td>
+                  </tr>
+                  <tr>
+                      <td>13</td>
+                      <td>14</td>
+                      <td>15</td>
+                      <td>16</td>
+                      <td>17</td>
+                      <td>18</td>
+                      <td>19</td>
+                  </tr>
+                  <tr>
+                      <td>20</td>
+                      <td>21</td>
+                      <td>22</td>
+                      <td>23</td>
+                      <td>24</td>
+                      <td>25</td>
+                      <td>26</td>
+                  </tr>
+                  <tr>
+                      <td>27</td>
+                      <td>28</td>
+                      <td>29</td>
+                      <td class="one">30</td>
+                      <td>.</td>
+                      <td>.</td>
+                      <td>.</td>
+                  </tr>
+                  <tr>
+                    <td>.</td>
+                    <td>.</td>
+                    <td>.</td>
+                    <td>.</td>
+                    <td>.</td>
+                    <td>.</td>
+                    <td>.</td>
+                </tr>
+              </table>
+              
+          </div>
+
+          <div class="mySlides">
+            <div class="numbertext">12 / 12</div>
+              <div class="month">
+                <br>
+                <strong >DECEMBER 2022</strong>
+                <br>
+                <strong>------------------</strong>
+              </div>
+              
+              <table>
+                  <tr>
+                      <th>SUN</th>
+                      <th>MON</th>
+                      <th>TUE</th>
+                      <th>WED</th>
+                      <th>THU</th>
+                      <th>FRI</th>
+                      <th>SAT</th>
+                  </tr>
+                  <tr>
+                    <td>.</td>
+                    <td>.</td>
+                    <td>.</td>
+                    <td>.</td>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>5</td>
+                    <td>6</td>
+                    <td>7</td>
+                    <td class="one">8</td>
+                    <td>9</td>
+                    <td>10</td>
+                </tr>
+                <tr>
+                    <td>11</td>
+                    <td>12</td>
+                    <td>13</td>
+                    <td>14</td>
+                    <td>15</td>
+                    <td>16</td>
+                    <td>17</td>
+                </tr>
+                <tr>
+                    <td>18</td>
+                    <td>19</td>
+                    <td>20</td>
+                    <td>21</td>
+                    <td>22</td>
+                    <td>23</td>
+                    <td class="one">24</td>
+                </tr>
+                <tr>
+                    <td class="one">25</td>
+                    <td>26</td>
+                    <td>27</td>
+                    <td>28</td>
+                    <td>29</td>
+                    <td class="one">30</td>
+                    <td class="one">31</td>
+                </tr>
+                <tr>
+                    <td>.</td>
+                    <td>.</td>
+                    <td>.</td>
+                    <td>.</td>
+                    <td>.</td>
+                    <td>.</td>
+                    <td>.</td>
+                </tr>
+              </table>
+              
+          </div>
+    </div>
+
+
+    <a class="prev" onclick="plusSlides(-1)">❮</a>
+    <a class="next" onclick="plusSlides(1)">❯</a>
+
+    <script>
+        var slideIndex = 1;
+        showSlides(slideIndex);
+        
+        function plusSlides(n) {
+          showSlides(slideIndex += n);
+        }
+        
+        function currentSlide(n) {
+          showSlides(slideIndex = n);
+        }
+        
+        function showSlides(n) {
+          var i;
+          var slides = document.getElementsByClassName("mySlides");
+          var dots = document.getElementsByClassName("demo");
+          var captionText = document.getElementById("caption");
+          if (n > slides.length) {slideIndex = 1}
+          if (n < 1) {slideIndex = slides.length}
+          for (i = 0; i < slides.length; i++) {
+              slides[i].style.display = "none";
+          }
+          for (i = 0; i < dots.length; i++) {
+              dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex-1].style.display = "block";
+          dots[slideIndex-1].className += " active";
+          captionText.innerHTML = dots[slideIndex-1].alt;
+        }
+        </script>
+</body>
+</html>
